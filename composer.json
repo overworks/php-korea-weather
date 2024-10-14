@@ -1,0 +1,45 @@
+{
+    "name": "minhyung/korea-weather",
+    "description": "PHP wrapper for VilageFcstInfoService",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Minhyung Park",
+            "email": "urlinee@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/overworks/php-korea-weather/issues",
+        "source": "https://github.com/overworks/php-korea-weather"
+    },
+    "require": {
+        "ext-json": "*",
+        "nesbot/carbon": "^3.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Minhyung\\KoreaWeather\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Minhyung\\KoreaWeather\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "@php -r \"copy('phpunit.xml.dist', 'phpunit.xml');\""
+        ],
+        "test": "./vendor/bin/phpunit"
+    }
+}
